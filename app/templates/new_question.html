@@ -1,0 +1,33 @@
+
+
+
+<html>
+<head>
+</head>
+<body>
+ <h1>New Question</h1>
+
+ <form method="post" >
+  
+  Question:
+  <textarea name="content"></textarea>
+  <br/>
+  TL:DR:
+  <input type="text" name="title"/> 
+  <br /> 
+  
+  <select multiple name="topics">
+   {% for topic in topics  %}
+    <option value={{topic.id}}>{{topic.title}}</option>
+   {% endfor %}
+  </select>  
+
+  <br/> 
+ <input type="submit" value="Submit"/>
+ </form>
+
+</body>
+</html>
+
+
+

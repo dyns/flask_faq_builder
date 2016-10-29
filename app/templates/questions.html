@@ -5,8 +5,10 @@
  </head>
  <body>
   <h1>Questions:</h1>
+  <a href="/question">New Question</a>
+  <br/>
   {% for question in questions %}
-   <p>{{question.title}}</p>
+   <a href={{'/question/%s' % question.id}}>{{question.title}}</p>
   {% endfor %}
  </body>
 </html>
